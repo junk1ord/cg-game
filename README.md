@@ -1,16 +1,22 @@
 # Computer Graphics
 ## Minor Project
+
 ---
+
 The main highlight of this project is a 2D game visualization. There are many such 2D animation games present in the market at the moment, many of them quite widespread across the globe. My intent was to recreate a small simulation or snippets of one such game in my own version.
 
 This game was programmed in Python environment. A dedicated library for creating such games in Python, called the ‘Pygame’ library was used here. Pygame is a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. Pygame is highly portable and runs on nearly every platform and operating system.
 
 The game involves two characters, a player controlled by the user and an automated enemy character. There is a score counter which increments upon every hit taken by the enemy. This is a rather basic implementation of any 2D game like Mario or Flappy Bird, meaning some features taken from both games and merged into one small, compressed version.
+
 ---
-### Brief Introduction
+
+### Brief Introduction 
 
 Since the advent of the early consoles like the Mitashi consoles and the Nintendo consoles, 2D games saw a massive explosion in the popularity and demand. Many games on these two platforms were unofficially on the list of the Hall of Fame for many gaming communities. The current games like Mario series, the Contra series or Flappy Bird are the adaptations of their previous 2D versions, early introduced in the aforementioned consoles. This project was an attempt to study and recreate some of the features of these classic games. It implements scenarios like movement, automovements, shooting projectiles – or in simpler words, bullets, collision between character and objects, character and character and a live score counter. This games was developed in python. A dedicated library called the Pygame library was administered here. Pygame is fairly low-level when it comes to writing games. One will quickly find themselves needing to wrap common functions into their own game environment. The great thing about this is there is nothing inside pygame to get in their way. Their program is in full control of everything. Python uses the fundamentals of Object Oriented Programming. Python also retains the inheritance mechanism of Object Oriented Programming. Hence, every entity in this game is an object. The character we play and control is an object, so is the enemy, and the bullet projectiles that the character shoots. 
+
 ---
+
 ### Methodology
 
 Three objects are needed here, the player, the enemy and the bullets. Hence, three objects were declared as such, along with respective attributes.
@@ -45,6 +51,7 @@ The bullets eject out of the approximate centre of the player. They are under th
 There are two ways in which the bullets disappear off the window:
 1. If the bullet touches the window boundaries
 2. If the bullet hits the enemy character. In this case, the score counter increases by one.
+
 ---
 
 ### Collisions
@@ -57,6 +64,7 @@ if man.hitbox[1] < goblin.hitbox[1] + goblin.hitbox[3] and man.hitbox[1] + man.h
 ```
 
 This results in the trigger of the ‘hit’ method described in the player’s object, resulting in a collision and a deduction in the total score by 5. The game freezes in the same condition and a message indicating the collision is displayed. The conditions reset themselves again back to the original setting.   
+
 ---
 
 ### Refreshing the Window
